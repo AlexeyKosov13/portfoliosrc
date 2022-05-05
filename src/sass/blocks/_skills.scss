@@ -4,9 +4,10 @@
     &__wrapper {
         display: grid;
         padding-top: 60px;
-        grid-template: repeat(2, minmax(270px, auto)) /repeat(4, 270px);
+        grid-template-columns: repeat(auto-fit, 270px);
         grid-auto-rows: minmax(270px, auto);
-        gap: 13px;
+        justify-content: space-between;
+        row-gap: 13px;
     }
     &__item {
         border: 1px solid #000;
@@ -23,12 +24,12 @@
     &__ratings {
         margin-top: 120px;
         display: grid;
-        grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 350px);
-        column-gap: 45px;
+        grid-template-columns: repeat(auto-fit, 320px);
+        justify-content: space-between;
         row-gap: 35px;
         &-item {
             display: grid;
-            grid-template: minmax(21px, auto) 14px / 200px 35px;
+            grid-template: minmax(41px, auto) 14px / 200px 35px;
             justify-content: space-between;
             align-content: space-between;
         }
